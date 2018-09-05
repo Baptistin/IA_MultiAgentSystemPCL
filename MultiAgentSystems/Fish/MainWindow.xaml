@@ -1,0 +1,82 @@
+﻿<Window x:Class="Fish.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="FishSimulator" Height="600" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="behind.png" Stretch="Fill" />
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="200" />
+        </Grid.ColumnDefinitions>
+        <Canvas Grid.Column="0" x:Name="oceanCanvas" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Canvas.Background>
+                <ImageBrush ImageSource="grass.png" Stretch="Fill" />
+            </Canvas.Background>
+        </Canvas>
+        <StackPanel Grid.Column="1" Orientation="Vertical">
+            <StackPanel>
+                <Label HorizontalAlignment="center" Foreground="White" Margin="20">PARAMETRES</Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Foreground="White">Nombres de Lapins :</Label>
+                <TextBox Name="LapinStart" Width="67" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Foreground="White">Nombres de Renards :</Label>
+                <TextBox Name="RenardStart" Width="59" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Foreground="White">Frequence (tik) Lapin</Label>
+                <TextBox Name="LapinTik" Width="66" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Foreground="White">Distance Visibilité Renard:</Label>
+                <TextBox Name="RenardSee" Width="40" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Foreground="White">TimeToDead Renard Repas</Label>
+                <TextBox Name="RenardRepas" Width="35" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Foreground="White">TTL Animaux Vieillesse</Label>
+                <TextBox Name="RenardVieux" Width="56" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Name="Validation" Click="ValidationParameter" Content="Valider" Margin="10"
+                        HorizontalAlignment="Center" Background="#FF60B764" />
+            </StackPanel>
+            <StackPanel>
+                <Label HorizontalAlignment="Center" Foreground="White" Margin="20">PARAMETRES ACTUEL</Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Foreground="White">Nombre de lapins :</Label>
+                <Label Name="LapinPresent" Foreground="White" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Foreground="White">Nombre de Renard :</Label>
+                <Label Name="RenardPresent" Foreground="White" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Foreground="White">Frequence Apparition lapin :</Label>
+                <Label Name="TikLapinApparition" Foreground="White" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Foreground="White">Distance Visibilité Renard : </Label>
+                <Label Name="VisibilityFox" Foreground="White" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Foreground="White">TimeToDead Renard Repas : </Label>
+                <Label Name="EatBar" Foreground="White" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Foreground="White">TTL Animaux Vieillesse : </Label>
+                <Label Name="LifeBar" Foreground="White" />
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+
+
+</Window>
